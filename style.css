@@ -1,0 +1,156 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+  display: flex;
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+}
+
+.sidebar{
+  width: 40%;
+  height: 100%;
+  background: url(./bg.jpg);
+  background-size: cover;
+  position: relative;
+}
+
+.logo{
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.4);
+  margin-top: 250px;
+  padding: 10px;
+}
+
+.logo img{
+  width: 100px;
+  height: auto;
+}
+
+@font-face {
+  font-family: 'Norse-Bold';
+  src: url(./Norse-Bold.otf);
+}
+
+.logo p{
+  color: white;
+  font-family: 'Norse-Bold', sans-serif;
+  font-size: 6rem;
+}
+
+.bg-credit{
+  color: white;
+  position: absolute;
+  width: 100%;
+  font-family: sans-serif;
+  opacity: 0.7;
+  bottom: 10px;
+  display: flex;
+  justify-content: center;
+}
+  
+.bg-credit a{
+  color: white;
+}
+
+.content{
+  width: 60%;
+  height: 100%;
+  margin-top: 100px;
+}
+
+.content p:nth-child(-n+3){
+  font-size: 24px;
+  font-family: sans-serif;
+  font-weight: bold;
+  padding: 0 50px;
+}
+
+.content p:nth-child(3){
+  margin-top: 25px;
+}
+
+form{
+  width: 100%;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  font-family: sans-serif;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  box-shadow: 0 4px 8px gray;
+  padding: 50px;
+}
+
+.f-name, .l-name, .email, .phone, .pass, .conpass{
+  display: flex;
+  flex-direction: column;
+}
+
+.name, .email-number, .password{
+  display: flex;
+  gap: 100px;
+}
+
+label{
+  font-size: 15px;
+  font-weight: 300;
+}
+
+input{
+  width: 300px;
+  height: 40px;
+  border: 1px solid #E5E7EB;
+  border-radius: 4px;
+  font-size: 18px;
+  padding: 0 10px;
+}
+
+input.focus{
+  border: 2px solid blue;
+  box-shadow: 1px 1px 5px 0px gray;
+}
+
+input.error{
+  border: 2px solid red;
+}
+
+#errorMsg{
+  font-size: 14px;
+  font-weight: 400;
+  color: red;
+  padding: 0;
+  margin: 0;
+}
+
+button{
+  margin: 0 50px;
+  background-color: #596D48;
+  color: white;
+  padding: 10px 40px;
+  font-size: 18px;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  box-shadow: 1px 1px 5px gray;
+}
+
+.content p:last-child{
+  font-size: 18px;
+  font-family: sans-serif;
+  margin: 20px 50px;
+}
+
+@media screen and (max-width: 800px){
+  .name, .email-number, .password{
+    flex-direction: column;
+  }
+}
